@@ -1,0 +1,20 @@
+// Colours
+$pink: #ee145b;
+$light-pink: tint($pink, 50);
+
+// Compass Options
+$base-font-size: 14px;
+$base-font-size: 18px;
+
+// Susy Options
+$relative-font-sizing: false;
+
+$total-cols: 12;
+
+$legacy-support-for-ie6: false;
+$legacy-support-for-ie7: false;
+
+$container-width: 960px;
+$container-style: static;
+
+$grid-padding: 0;
