@@ -21,8 +21,8 @@
 // Helpers ==========================================
 
 .grid {
-  // @include susy-grid-background;
-  // @include debug-vertical-alignment;
+  //@include susy-grid-background;
+  //@include debug-vertical-alignment;
 }
 
 // Typography =======================================
@@ -276,6 +276,32 @@ section {
 
       }
     }
+  }
+
+  &.about {
+    h2, p { margin-left: 0; }
+
+    div {
+      @include span-columns(4,12);
+      @include adjust-font-size-to($base-font-size * 0.75, $lines: 1);
+
+      &.about-share { @include omega };
+
+    }
+  }
+}
+
+section.venue {
+  .venue-location {
+    @include span-columns(4 alpha, 12, 1em);
+    h2 { text-transform: none; };
+  }
+  .venue-map {
+    @include span-columns(8 omega,12);
+    background: url(http://baconmockup.com/960/540) no-repeat center center;
+    background-size: cover;
+    height: 0;
+    padding-bottom: 56.25%; /* 16:9 */
   }
 }
 
