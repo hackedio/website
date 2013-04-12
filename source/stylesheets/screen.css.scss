@@ -21,50 +21,97 @@
 // Helpers ==========================================
 
 .grid {
-  @include susy-grid-background;
+  // @include susy-grid-background;
+  // @include debug-vertical-alignment;
 }
 
 // Typography =======================================
+@include establish-baseline;
+
 h1 {
+  @include adjust-font-size-to($base-font-size * 2, $lines: 2);
+  margin: rhythm(0.25) 0;
+
   font-family: "Unicod Sans Regular", Tahoma, Arial, sans-serif;
   font-size-adjust:0.55;
   font-weight: normal;
   font-style:normal;
 
-  font-size: 2.027em;
+  background-color: $pink;
+  color: #fff;
+  padding-right: 0.25em;
+  padding-left: 0.25em;
 }
 
 h2 {
-  font-size: 1.688em;
-  line-height: 1.802em;
+  @include adjust-font-size-to($base-font-size * 1.5, $lines: 1);
+
+  color: $pink;
+  text-transform: uppercase;
+
+  font-family: "Unicod Sans Regular", Tahoma, Arial, sans-serif;
+  font-size-adjust:0.55;
+  font-weight: normal;
+  font-style:normal;
 }
 
 h3 {
-  font-size: 1.333em;
-  line-height: 1.5em;
+  @include adjust-font-size-to($base-font-size * 1.25, $lines: 1);
+
+  font-family: "Unicod Sans Regular", Tahoma, Arial, sans-serif;
+  font-size-adjust:0.55;
+  font-weight: normal;
+  font-style:normal;
 }
 
 p, ul, ol {
   font-size: 1em;
-  line-height: 1.5em;
+  @include pre(1);
+
+  &:first-child {
+    @include leader;
+  }
+
+  @include trailer;
+}
+
+ul, ol {
+  padding-left: 0;
 }
 
 a {
   color: $pink;
+  padding: 0 2px;
 
   &:visited, &:active {
     color: $light-pink;
   };
 
   &:hover {
-    color: $pink;
+    color: $purple;
   }
 
   &:focus {
-    background-color: $pink;
+    background-color: $purple;
     color: #fff;
   }
 
+}
+
+figure {
+  margin: rhythm(1) 0;
+  text-align: center;
+
+  img {
+    border-radius: 1em;
+  }
+
+  figcaption {
+    margin: rhythm(0.5) 0;
+    font-style: italic;
+    font-size: 0.8em;
+    color: #666;
+  }
 }
 
 // Site Styles ======================================
@@ -76,7 +123,9 @@ body {
 header {
   @include clearfix;
   @include container;
-  background-color: #2e3192;
+  background-color: $dark-purple;
+
+  &:hover li a { text-decoration: underline };
 
   .logo {
     @include span-columns(5,12,0.5em);
@@ -88,8 +137,6 @@ header {
 
   ul {
     @include span-columns(7,12,0.5em);
-    font-size: 1.25em;
-
     padding: 3.5em 0 0 0;
     text-align: right;
     list-style-type: none;
@@ -105,10 +152,17 @@ header {
         -webkit-transition: all 0.1s ease-in;
         -moz-transition: all 0.1s ease-in;
         transition: all 0.1s ease-in;
+        text-decoration: none;
 
         &:hover, &:focus {
           color: #fff;
-          background-color: rgba(238,20,91,0.5);
+          background-color: rgba(238,20,91,1);
+        }
+
+        &.current {
+          color: #000;
+          background-color: #fff;
+          text-decoration: none;
         }
       }
     }
@@ -119,13 +173,22 @@ footer {
   @include clearfix;
   @include container;
 
+  margin: 1em 0 0 0;
+  padding-bottom: 1em;
+  background-color: $dark-purple;
+
   p {
-    margin-bottom: 0;
-    text-align: right;
+    margin: 0;
     font-size: 0.75em;
+    color: #fff;
+    text-align: right;
 
     a {
       color: $pink;
+
+      &:focus, &:hover {
+        color: $light-pink;
+      }
     }
   }
 }
@@ -133,7 +196,7 @@ footer {
 .container {
   @include container;
   @include clearfix;
-  @extend .grid;
+  @extend .grid !optional;
 
   // Force images to scale down to their container widths.
   img {
@@ -143,18 +206,23 @@ footer {
 }
 
 section {
-  margin: 1em 0;
+  @include leader;
+  @include trailer;
 
   h1 {
     background-color: $pink;
     text-transform: uppercase;
     color: #fff;
-    padding: 0 0.25em;
     display: inline-block;
-    margin-bottom: 0;
+    -webkit-transform: skew(0, -2deg);
+    -moz-transform: skew(0, -2deg);
+    -ms-transform: skew(0, -2deg);
+    -o-transform: skew(0, -2deg);
+    transform: skew(0, -2deg);
+    box-shadow: 0 4px 4px rgba(238,20,91,0.25)
   }
 
-  h2, h3 { color: $pink; }
+  h2, h3, h4 { color: $pink; @include pre(1); }
 
   &.artwork {
     outline: none;
@@ -168,18 +236,6 @@ section {
       height: 240px;
     }
   }
-}
-
-
-figure {
-
-  figcaption {
-    margin: 0.25em 0 0.5em;
-    font-style: italic;
-    font-size: 0.8em;
-    color: #666;
-  }
-
 }
 
 // H5BP helper classes & mixins.
