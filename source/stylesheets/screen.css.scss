@@ -298,10 +298,6 @@ section.venue {
   }
   .venue-map {
     @include span-columns(8 omega,12);
-    background: url(http://baconmockup.com/960/540) no-repeat center center;
-    background-size: cover;
-    height: 0;
-    padding-bottom: 56.25%; /* 16:9 */
   }
 }
 
