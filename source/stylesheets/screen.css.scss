@@ -69,47 +69,60 @@ a {
 
 // Site Styles ======================================
 body {
-  background-image: url("/images/dirt.png");
+  background-color: #fff;
+  color: #000;
 }
 
 header {
   @include clearfix;
-  /* background-image: url("/images/pipe-top.png");
-  background-position: columns(1) bottom;
-  background-repeat: no-repeat; */
-  background-color: #006;
+  @include container;
+  background-color: #2e3192;
 
-  h1 {
-    @include replace-text-with-dimensions("logo-text.png", 389, 144);
-    background-color: transparent;
-    margin-left: 50px
-  }
+  .logo {
+    @include span-columns(5,12,0.5em);
 
-  h2 {
-    @include hide-text; font-size: 1px;
+    img {
+      margin: 1em 0;
+    }
   }
 
   ul {
-    display: none; // Temporarily Hidden ***
+    @include span-columns(7,12,0.5em);
+    font-size: 1.25em;
+
+    padding: 3.5em 0 0 0;
+    text-align: right;
+    list-style-type: none;
+    margin: 0;
+
+    li {
+      display: inline;
+
+      a {
+        padding: 0.5em;
+        color: #fff;
+        border-radius: 5px;
+        -webkit-transition: all 0.1s ease-in;
+        -moz-transition: all 0.1s ease-in;
+        transition: all 0.1s ease-in;
+
+        &:hover, &:focus {
+          color: #fff;
+          background-color: rgba(238,20,91,0.5);
+        }
+      }
+    }
   }
 }
 
-.footer-wrapper {
-  background-color: #000;
-}
-
 footer {
-  width: 960px;
-  margin: 0 auto;
-  padding: 3em 0em 1em;
-
-  background-image: url("/images/pipe-base.png");
-  background-repeat: no-repeat;
+  @include clearfix;
+  @include container;
 
   p {
-    color: #fff;
-    text-align: right;
     margin-bottom: 0;
+    text-align: right;
+    font-size: 0.75em;
 
     a {
       color: $pink;
@@ -117,62 +130,42 @@ footer {
   }
 }
 
-#main-content {
-  @include clearfix;
-}
-
 .container {
+  @include container;
+  @include clearfix;
+  @extend .grid;
+
   // Force images to scale down to their container widths.
   img {
     max-width: 100%;
     height: auto;
   }
-
-  @include container;
-  @include clearfix;
-  @extend .grid;
 }
 
-// Main Content Block
-.content {
-  @include span-columns(9 omega,12);
-  padding-bottom: 1em;
+section {
+  margin: 1em 0;
 
-  @include prefix(3);
-  background-image: url("/images/pipe-top.png"), url("/images/pipe.png");
-  background-repeat: no-repeat, repeat-y;
-  background-position: left top, left bottom;
+  h1 {
+    background-color: $pink;
+    text-transform: uppercase;
+    color: #fff;
+    padding: 0 0.25em;
+    display: inline-block;
+    margin-bottom: 0;
+  }
 
-  section {
-    background-color: #000;
-    color: #000;
+  h2, h3 { color: $pink; }
 
-    @include span-columns(9, 9, 1em);
-    margin: 1em 0;
+  &.artwork {
+    outline: none;
+    padding: 0;
+    margin: 0 0 0 columns(-5);
+    background-color: transparent;
+    width: 960px;
 
-    h1 {
-      background-color: $pink;
-      color: #fff;
-      padding: 0 0.25em;
-      display: inline-block;
-      margin-bottom: 0;
-    }
-
-    h2,h3,h4,p,ul,ol { color: #fff; }
-
-    h2, h3 { color: $pink; }
-
-    &.artwork {
-      outline: none;
-      padding: 0;
-      margin: 0 0 0 columns(-5);
-      background-color: transparent;
+    img {
       width: 960px;
-
-      img {
-        width: 960px;
-        height: 240px;
-      }
+      height: 240px;
     }
   }
 }

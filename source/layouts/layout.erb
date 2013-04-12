@@ -33,29 +33,27 @@
     <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
 <![endif]-->
 
-<div class="container">
-  <header>
-    <h1>HACKED</h1>
-    <h2>Learn+Build+Share</h2>
-
-    <ul role="navigation">
-      <li><a href="/">Home</a></li>
-      <li><a href="/blog/">Blog</a></li>
-      <li><a href="/team/">Team</a></li>
-      <li><a href="/tickets/">Tickets</a></li>
-    </ul>
-  </header>
-
-  <div id="main-content" role="main">
-    <%= yield %>
+<header>
+  <div class="logo">
+    <a href="/" class="logo"><img src="/images/logo-text.png" alt="HACKED: Learn>Build>Share"></a>
   </div>
+
+  <ul role="navigation">
+    <li><a href="/">Home</a></li>
+    <li><a href="/where/">Venue</a></li>
+    <li><a href="/qa/">Q&amp;A</a></li>
+    <li><a href="/travel/">Travel &amp; Overnight</a></li>
+    <li><a href="/tickets/" class="tickets">Tickets</a></li>
+  </ul>
+</header>
+
+<div class="container" role="main">
+  <%= yield %>
 </div>
 
-<div class="footer-wrapper">
-  <footer>
-    <p>&copy;<%= copyright_years(2013) %> <a href="https://thelab.o2.com/">The Lab</a> and <a href="http://geeksoflondonc.om/">Geeks of London Ltd</a></p>
-  </footer>
-</div>
+<footer>
+  <p>&copy;<%= copyright_years(2013) %> <a href="https://thelab.o2.com/">The Lab</a> and <a href="http://geeksoflondonc.om/">Geeks of London Ltd</a></p>
+</footer>
 
   <%= javascript_include_tag "//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js" %>
 

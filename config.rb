@@ -20,6 +20,8 @@ activate :blog do |blog|
   blog.prefix = "blog"
 end
 
+activate :livereload, grace_period: 0.5
+
 ###
 # Page command
 ###
