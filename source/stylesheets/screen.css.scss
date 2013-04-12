@@ -175,15 +175,13 @@ footer {
   @include clearfix;
   @include container;
 
-  margin: 1em 0 0 0;
-  padding-bottom: 1em;
+  margin-top: rhythm(1);
+  padding-bottom: rhythm(1);
   background-color: $dark-purple;
 
   p {
-    margin: 0;
     font-size: 0.75em;
     color: #fff;
-    text-align: right;
 
     a {
       color: $pink;
@@ -210,6 +208,18 @@ footer {
 section {
   @include leader;
   @include trailer;
+
+  padding-top: rhythm(1);
+  padding-bottom: rhythm(0.5);
+
+  &.sponsors {
+    // Allow background to bleed out of column
+    @include bleed(1);
+
+    background-color: #def;
+
+    h1 { background-color: $purple; box-shadow: none; }
+  }
 
   h1 {
     background-color: $pink;
