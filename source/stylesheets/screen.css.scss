@@ -175,7 +175,6 @@ footer {
   @include clearfix;
   @include container;
 
-  margin-top: rhythm(1);
   padding-bottom: rhythm(1);
   background-color: $dark-purple;
 
@@ -208,9 +207,10 @@ footer {
 section {
   @include leader;
   @include trailer;
+  @include clearfix;
 
   padding-top: rhythm(1);
-  padding-bottom: rhythm(0.5);
+  padding-bottom: rhythm(1);
 
   &:hover a {
     text-decoration: underline;
@@ -256,6 +256,26 @@ section {
     h2, h3 {color: #999; }
     a { color: #999; }
 
+  }
+
+  &.sponsors {
+    display: table;
+    width: 100%;
+    margin-bottom: 0;
+
+    ul {
+      list-style-type: none;
+      display: table-row;
+      @include clearfix;
+
+      li {
+        @include span-columns(4,12);
+        display: table-cell;
+        background-color: #fff;
+        height: 80px;
+
+      }
+    }
   }
 }
 
