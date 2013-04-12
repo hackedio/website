@@ -39,11 +39,12 @@
   </div>
 
   <ul role="navigation">
-    <li><a href="/where/">Venue</a></li>
-    <li><a href="/qa/">Q&amp;A</a></li>
-    <li><a href="/travel/">Travel</a></li>
-    <li><a href="/tickets/" class="tickets">Tickets</a></li>
-    <li><a href="/sponsorship/">Sponsorship</a></li>
+    <%= nav_link_to("Home", "/") %>
+    <%= nav_link_to("Venue", "/where/") %>
+    <%= nav_link_to("Q&amp;A", "/questions/") %>
+    <%= nav_link_to("Travel", "/travel/") %>
+    <%= nav_link_to("Tickets", "/tickets/") %>
+    <%= nav_link_to("Sponsorship", "/sponsorship/") %>
   </ul>
 </header>
 

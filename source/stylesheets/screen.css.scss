@@ -125,8 +125,6 @@ header {
   @include container;
   background-color: $dark-purple;
 
-  &:hover li a { text-decoration: underline };
-
   .logo {
     @include span-columns(5,12,0.5em);
 
@@ -137,13 +135,23 @@ header {
 
   ul {
     @include span-columns(7,12,0.5em);
-    padding: 3.5em 0 0 0;
+    padding: 4em 0 0 0;
     text-align: right;
     list-style-type: none;
     margin: 0;
 
+    &:hover li a { text-decoration: underline };;
+
     li {
       display: inline;
+
+      &.active {
+        a {
+          background-color: #fff;
+          color: #000;
+          text-decoration: none
+        }
+      }
 
       a {
         padding: 0.5em;
@@ -157,12 +165,6 @@ header {
         &:hover, &:focus {
           color: #fff;
           background-color: rgba(238,20,91,1);
-        }
-
-        &.current {
-          color: #000;
-          background-color: #fff;
-          text-decoration: none;
         }
       }
     }

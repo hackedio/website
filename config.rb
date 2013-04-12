@@ -73,6 +73,15 @@ helpers do
     img
   end
 
+  def nav_link_to(link, url, opts={})
+    if current_resource.url == url_for(url)
+      prefix = '<li class="active">'
+    else
+      prefix = '<li>'
+    end
+    prefix + link_to(link, url, opts) + "</li>"
+  end
+
 end
 
 
