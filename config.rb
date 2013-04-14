@@ -38,7 +38,7 @@ activate :blog do |blog|
   # blog.page_link = "page/:num"
 end
 
-page "/feed.xml", :layout => false
+page "/blog/feed.xml", :layout => false
 
 activate :livereload, grace_period: 0.5
 
