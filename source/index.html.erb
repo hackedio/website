@@ -18,18 +18,29 @@
   </div>
 </section>
 
+<section>
+  <h1>Latest News</h1>
+  <% blog.articles[0..0].each do |article| %>
+  <article>
+    <h2><%= link_to article.title, article %></h2>
+   <%= article.summary %>
+   <p><%= link_to "Read more...", article %></p>
+  </article>
+<% end %>
+</section>
+
 <section class="highlight sponsors">
   <h1>Supported by:</h1>
   <h2>Platinum Sponsor</h2>
   <ul>
-    <li><a href="http://www.heroku.com/"><img src="/images/sponsors/heroku.png"></a></li>
+    <li><a href="/sponsorship/"><img src="/images/sponsors/your-company-here.png"></a></li>
   </ul>
 
   <h2>Additional Sponsors</h2>
   <ul>
-    <li><a href="http://developer.paypal.com/"><img src="/images/sponsors/paypal.png"></a></li>
-    <li><a href="http://www.github.com/"><img src="/images/sponsors/github.png"></a></li>
-    <li><a href="http://developer.paypal.com/"><img src="/images/sponsors/paypal.png"></a></li>
-    <li><a href="http://www.github.com/"><img src="/images/sponsors/github.png"></a></li>
+    <li><a href="/sponsorship/"><img src="/images/sponsors/your-company-here.png"></a></li>
+    <li><a href="/sponsorship/"><img src="/images/sponsors/your-company-here.png"></a></li>
+    <li><a href="/sponsorship/"><img src="/images/sponsors/your-company-here.png"></a></li>
   </ul>
+  <p><a href="/">Interested in sponsoring HACKED?</a></p>
 </section>
