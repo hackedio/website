@@ -145,7 +145,7 @@ header {
       display: inline;
 
       &.active {
-        a {
+        a, a:visited {
           background-color: #fff;
           color: #000;
           text-decoration: none
@@ -160,6 +160,8 @@ header {
         -moz-transition: all 0.1s ease-in;
         transition: all 0.1s ease-in;
         text-decoration: none;
+
+        &:visited { color: #fff };
 
         &:hover, &:focus {
           color: #fff;
@@ -286,7 +288,7 @@ section.about {
     @include span-columns(4,12);
     @include adjust-font-size-to($base-font-size * 0.75, $lines: 1);
 
-    @include nth-omega(3);
+    &.about-share { @include omega(); }
   }
 }
 
@@ -369,10 +371,9 @@ section.blog {
       -o-transform: skew(0, 0);
       transform: skew(0, 0);
       box-shadow: none;
-      display: block;
     }
 
-    h1, h2, h3, h4 { text-align: center; margin: 0.25em 0 0 0; }
+    h1, h2, h3, h4 { text-align: left; margin: 0.25em 0 0 0; }
   }
 
   section.about {

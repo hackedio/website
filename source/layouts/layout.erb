@@ -6,7 +6,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title><%= current_page.data.title || "HACKED. 20th/21st July 2013 @ The O2, London" %></title>
+  <title><%= current_page.data.title + " :: " if current_page.data.title? %>HACKED :: 20-21 July 2013 @ The O2, London</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width; initial-scale=1.0">
   <link rel="alternate" type="application/atom+xml" title="The HACKED Blog" href="http://hacked.io/blog/feed.xml" />
@@ -38,13 +38,7 @@
   <div class="logo">
     <a href="/"><img src="/images/logo-text.png" alt="HACKED: Learn>Build>Share"></a>
   </div>
-
-  <ul role="navigation">
-    <%= nav_link_to("Venue+Travel", "/venue/") %>
-    <%= nav_link_to("Tickets", "/tickets/") %>
-    <%= nav_link_to("Sponsorship", "/sponsorship/") %>
-    <%= nav_link_to("Questions?", "/questions/") %>
-  </ul>
+  <%= partial "layouts/navigation" %>
 </header>
 
 <div class="container" role="main">
