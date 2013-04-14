@@ -66,7 +66,6 @@ h3 {
 
 p, ul, ol {
   font-size: 1em;
-  @include pre(1);
 
   &:first-child {
     @include leader;
@@ -230,10 +229,14 @@ section {
     -ms-transform: skew(0, -2deg);
     -o-transform: skew(0, -2deg);
     transform: skew(0, -2deg);
-    box-shadow: 0 4px 4px rgba(238,20,91,0.25)
+    box-shadow: 0 4px 4px rgba(238,20,91,0.25);
+
+    a, a:visited, a:hover, a:focus {
+      color: #fff;
+    }
   }
 
-  h2, h3, h4 { color: $pink; @include pre(1); }
+  h2, h3, h4 { color: $pink; }
 
   &.highlight {
     // Allow background to bleed out of column
@@ -257,49 +260,159 @@ section {
     a { color: #999; }
 
   }
+}
 
-  &.sponsors {
-    display: table;
-    width: 100%;
-    margin-bottom: 0;
+section.sponsors {
+  margin-bottom: 0;
 
-    ul {
-      list-style-type: none;
-      display: table-row;
-      @include clearfix;
+  ul {
+    list-style-type: none;
+    @include clearfix;
 
-      li {
-        @include span-columns(4,12);
-        display: table-cell;
-        background-color: #fff;
-        height: 80px;
-
-      }
+    li {
+      @include span-columns(4,12);
+      @include nth-omega(3);
+      background-color: #fff;
+      height: 80px;
+      margin-bottom: rhythm(1);
     }
   }
+}
 
-  &.about {
-    h2, p { margin-left: 0; }
+section.about {
+  h2, p { margin-left: 0; }
 
-    div {
-      @include span-columns(4,12);
-      @include adjust-font-size-to($base-font-size * 0.75, $lines: 1);
+  div {
+    @include span-columns(4,12);
+    @include adjust-font-size-to($base-font-size * 0.75, $lines: 1);
 
-      &.about-share { @include omega };
-
-    }
+    @include nth-omega(3);
   }
 }
 
 section.venue {
   .venue-location {
-    @include span-columns(4 alpha, 12, 1em);
+    @include span-columns(4, 12, 1em);
+    background-color: #eee;
     h2 { text-transform: none; };
   }
   .venue-map {
     @include span-columns(8 omega,12);
+    iframe {
+      width: 100%;
+      height: 600px;
+    }
   }
 }
+
+section.blog {
+  @include span-columns(12,12);
+}
+
+// Wide version of site
+@media only screen and (min-width: 1200px) {
+  body {
+    font-size: 125%;
+  }
+
+  .container {
+    max-width: 1280px;
+  }
+}
+
+// Alternative layout for menu when it no longer fits
+@media only screen and (max-width: 990px) {
+  header {
+    .logo {
+      @include span-columns(12,12);
+      text-align: center;
+      img { max-width: 100%; }
+    }
+    nav {
+      @include span-columns(12,12);
+    }
+    ul {
+      width: 100%;
+      padding: 0 0 rhythm(1) 0;
+      text-align: center;
+
+      li {
+        padding: 0;
+      }
+    }
+  }
+}
+
+// Mobile
+@media only screen and (max-width: 640px) {
+  body {
+    font-size: 90%;
+  }
+
+  header {
+    ul {
+      li {
+        a {
+          display: block;
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  section {
+    padding: 0 0 rhythm(0.25) 0;
+    h1 {
+      -webkit-transform: skew(0, 0);
+      -moz-transform: skew(0, 0);
+      -ms-transform: skew(0, 0);
+      -o-transform: skew(0, 0);
+      transform: skew(0, 0);
+      box-shadow: none;
+      display: block;
+    }
+
+    h1, h2, h3, h4 { text-align: center; margin: 0.25em 0 0 0; }
+  }
+
+  section.about {
+     div {
+        @include span-columns(12,12);
+        @include nth-omega(1);
+        @include adjust-font-size-to($base-font-size, $lines: 1);
+    }
+  }
+
+  section.sponsors {
+    ul {
+      li {
+        @include span-columns(12,12);
+      }
+    }
+  }
+
+  section.venue {
+    .venue-map, .venue-location {
+      @include span-columns(12,12);
+    }
+
+    .venue-location { background-color: inherit; }
+
+    .venue-map {
+      iframe {
+        height: 200px;
+      }
+    }
+  }
+}
+
+// .blog-sidebar {
+//   @include span-columns(3 omega, 12);
+
+//   ul {
+//     list-style-type: none;
+//   }
+// }
 
 // H5BP helper classes & mixins.
 @include h5bp-helpers;
