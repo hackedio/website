@@ -264,18 +264,43 @@ section {
   }
 }
 
+
+// Home Page
+section.about {
+  @include span-columns(9,12);
+
+  h2, p { margin-left: 0; }
+
+  div {
+    @include span-columns(3,9);
+
+    &.about-learn, &.about-build, &.about-share {
+     @include adjust-font-size-to($base-font-size * 0.75, $lines: 1);
+    }
+
+    &.about-share { @include omega(); }
+
+    &.about-blog { @include span-columns(9,9); }
+  }
+}
+
 section.sponsors {
+  @include span-columns(3 omega,12);
+  @include clearfix;
   margin-bottom: 0;
+  text-align: center;
+
+  h2 {
+    @include adjust-font-size-to($base-font-size * 1.25, $lines: 1);
+  }
 
   ul {
     list-style-type: none;
     @include clearfix;
 
     li {
-      @include span-columns(4,12);
-      @include nth-omega(3);
-      height: 75px;
-      margin-bottom: rhythm(1);
+      @include span-columns(3,3);
+      margin-bottom: rhythm(0.5);
 
       img {
         background-color: #fff;
@@ -285,17 +310,7 @@ section.sponsors {
   }
 }
 
-section.about {
-  h2, p { margin-left: 0; }
-
-  div {
-    @include span-columns(4,12);
-    @include adjust-font-size-to($base-font-size * 0.75, $lines: 1);
-
-    &.about-share { @include omega(); }
-  }
-}
-
+// Venue & Travel
 section.venue {
   .venue-location {
     @include span-columns(4, 12, 1em);
@@ -311,10 +326,12 @@ section.venue {
   }
 }
 
+// Blog
 section.blog {
   @include span-columns(12,12);
 }
 
+// Media Queries --------------------------------------------------------------
 // Wide version of site
 @media only screen and (min-width: 1200px) {
   body {
@@ -326,8 +343,8 @@ section.blog {
   }
 }
 
-// Alternative layout for menu when it no longer fits
-@media only screen and (max-width: 990px) {
+// Collapse Menu
+@media only screen and (max-width: 1000px) {
   header {
     .logo {
       @include span-columns(12,12);
@@ -346,6 +363,23 @@ section.blog {
         padding: 0;
       }
     }
+  }
+}
+
+// Collapse Learn/Build/Share Sections
+@media only screen and (max-width: 810px) {
+  section.about {
+      @include span-columns(8,12);
+
+    div {
+      @include span-columns(8,8);
+      @include nth-omega(1);
+      @include adjust-font-size-to($base-font-size, $lines: 1);
+    }
+  }
+
+  section.sponsors {
+    @include span-columns(4 omega,12);
   }
 }
 
@@ -380,22 +414,34 @@ section.blog {
     h1, h2, h3, h4 { margin: 0.25em 0; }
   }
 
-  section.about {
-     div {
-        @include span-columns(12,12);
-        @include nth-omega(1);
-        @include adjust-font-size-to($base-font-size, $lines: 1);
-    }
-  }
-
   section.sponsors {
-    text-align: center;
+    @include span-columns(12,12);
 
     ul {
       li {
-        @include span-columns(12,12);
+        @include span-columns(6,12);
+        @include nth-omega(2);
+
+        img {
+          max-height: 60px;
+        }
       }
     }
+
+    ul.sponsors-platinum {
+      li {
+        @include span-columns(12,12);
+        @include nth-omega(1);
+
+        img {
+          max-height: 75px;
+        }
+      }
+    }
+  }
+
+  section.about {
+    @include span-columns(12,12);
   }
 
   section.venue {

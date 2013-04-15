@@ -16,31 +16,33 @@
     <h2>Share</h2>
     <p>Jerky sausage pork loin rump pork frankfurter. Short ribs ground round sausage pork chop. Pork belly brisket meatloaf salami andouille pork. Hamburger turducken t-bone salami pork, frankfurter pastrami short loin meatloaf spare ribs shankle prosciutto. Shankle sirloin meatloaf tongue ham hock salami chuck.</p>
   </div>
+
+  <div class="about-blog">
+    <h1>Latest News</h1>
+    <% blog.articles[0..0].each do |article| %>
+    <article>
+      <h2><%= link_to article.title, article %></h2>
+     <%= article.summary %>
+     <p><%= link_to "Read more...", article %></p>
+    </article>
+    <% end %>
+  </div>
 </section>
 
-<section>
-  <h1>Latest News</h1>
-  <% blog.articles[0..0].each do |article| %>
-  <article>
-    <h2><%= link_to article.title, article %></h2>
-   <%= article.summary %>
-   <p><%= link_to "Read more...", article %></p>
-  </article>
-<% end %>
-</section>
-
-<section class="highlight sponsors">
-  <h1>Supported by:</h1>
-  <h2>Platinum Sponsor</h2>
-  <ul>
-    <li><a href="/sponsorship/"><img src="/images/sponsors/your-company-here.png"></a></li>
+<section class="sponsors">
+  <h2>Platinum Sponsor:</h2>
+  <ul class="sponsors-platinum">
+    <li><a href="http://heroku.com/"><img src="/images/sponsors/heroku.png" alt="Heroku"></a></li>
   </ul>
 
-  <h2>Additional Sponsors</h2>
+  <h2>Additional Sponsors:</h2>
   <ul>
-    <li><a href="/sponsorship/"><img src="/images/sponsors/your-company-here.png"></a></li>
-    <li><a href="/sponsorship/"><img src="/images/sponsors/your-company-here.png"></a></li>
-    <li><a href="/sponsorship/"><img src="/images/sponsors/your-company-here.png"></a></li>
+    <li><a href="/sponsorship/"><img src="/images/sponsors/your-company-here.png" alt="Sponsor Name"></a></li>
+    <li><a href="/sponsorship/"><img src="/images/sponsors/your-company-here.png" alt="Sponsor Name"></a></li>
+    <li><a href="/sponsorship/"><img src="/images/sponsors/your-company-here.png" alt="Sponsor Name"></a></li>
+    <li><a href="/sponsorship/"><img src="/images/sponsors/your-company-here.png" alt="Sponsor Name"></a></li>
+    <li><a href="/sponsorship/"><img src="/images/sponsors/your-company-here.png" alt="Sponsor Name"></a></li>
   </ul>
-  <p><a href="/">Interested in sponsoring HACKED?</a></p>
+  <p><a href="/sponsorship/">Interested in sponsoring HACKED?</a></p>
 </section>
+
