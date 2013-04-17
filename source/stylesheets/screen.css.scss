@@ -125,7 +125,7 @@ header {
   background-color: $dark-purple;
 
   .logo {
-    @include span-columns(5,12,0.5em);
+    @include span-columns(4,12,0.5em);
 
     img {
       margin: 1em 0;
@@ -133,13 +133,13 @@ header {
   }
 
   ul {
-    @include span-columns(7,12,0.5em);
+    @include span-columns(8,12,0.5em);
     padding: 4em 0 0 0;
     text-align: right;
     list-style-type: none;
     margin: 0;
 
-    &:hover li a { text-decoration: underline };;
+    ///&:hover li a { text-decoration: underline };;
 
     li {
       display: inline;
