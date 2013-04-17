@@ -280,7 +280,10 @@ section.about {
 
     &.about-share { @include omega(); }
 
-    &.about-blog { @include span-columns(9,9); }
+    &.about-blog { 
+     @include span-columns(9,9); 
+     margin-top: 2em;
+    }
   }
 }
 
@@ -291,7 +294,8 @@ section.sponsors {
   text-align: center;
 
   h2 {
-    @include adjust-font-size-to($base-font-size * 1.25, $lines: 1);
+    @include adjust-font-size-to($base-font-size * 1, $lines: 1);
+    text-align: left;
   }
 
   ul {
@@ -300,7 +304,6 @@ section.sponsors {
 
     li {
       @include span-columns(3,3);
-      margin-bottom: rhythm(0.5);
 
       img {
         background-color: #fff;
@@ -308,6 +311,9 @@ section.sponsors {
       }
     }
   }
+  
+  p { font-size: 0.8em; }
+  
 }
 
 // Venue & Travel
