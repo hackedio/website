@@ -179,18 +179,37 @@ footer {
   padding-bottom: rhythm(1);
   background-color: $dark-purple;
 
-  p {
+  p, ul {
     font-size: 0.75em;
     color: #fff;
+    margin: 0;
 
     a {
       color: $pink;
+      padding: 0;
 
       &:focus, &:hover {
         color: $light-pink;
       }
     }
   }
+
+  ul {
+    list-style-type: none;
+  }
+
+  li {
+    display: inline;
+
+    &:after {
+      content: ' - ';
+    }
+
+    &:last-child:after {
+      content: '';
+    }
+  }
+
 }
 
 .container {
