@@ -182,7 +182,7 @@ footer {
   p, ul {
     font-size: 0.75em;
     color: #fff;
-    margin: 0;
+    margin: 0.25em 0;
 
     a {
       color: $pink;
@@ -306,7 +306,7 @@ section.about {
   }
 }
 
-section.sponsors {
+section.sponsors-sidebar {
   @include span-columns(3 omega,12);
   @include clearfix;
   margin-bottom: 0;
@@ -323,6 +323,7 @@ section.sponsors {
 
     li {
       @include span-columns(3,3);
+      margin-bottom: 1.5em;
 
       img {
         background-color: #fff;
@@ -349,6 +350,25 @@ section.venue {
       height: 600px;
     }
   }
+}
+
+// Sponsorship page
+section.sponsors {
+
+  .sponsor-listing{
+    h3 { margin-top: 0em; }
+
+    img { 
+      float: left;
+      margin: 0 1em 0 0;
+    }
+  }
+  
+  .sponsor-partners {
+    text-align: center;
+    img { margin: 0 1em 0 0; }
+  }
+  
 }
 
 // Blog
@@ -403,7 +423,7 @@ section.blog {
     }
   }
 
-  section.sponsors {
+  section.sponsors-sidebar {
     @include span-columns(4 omega,12);
   }
 }
@@ -439,7 +459,7 @@ section.blog {
     h1, h2, h3, h4 { margin: 0.25em 0; }
   }
 
-  section.sponsors {
+  section.sponsors-sidebar {
     @include span-columns(12,12);
 
     ul {
@@ -452,21 +472,16 @@ section.blog {
         }
       }
     }
-
-    ul.sponsors-platinum {
-      li {
-        @include span-columns(12,12);
-        @include nth-omega(1);
-
-        img {
-          max-height: 75px;
-        }
-      }
-    }
   }
 
   section.about {
     @include span-columns(12,12);
+  }
+
+  section.sponsors {
+    .sponsor-listing {
+      img { margin-bottom: 1em; }
+    }
   }
 
   section.venue {
@@ -483,14 +498,6 @@ section.blog {
     }
   }
 }
-
-// .blog-sidebar {
-//   @include span-columns(3 omega, 12);
-
-//   ul {
-//     list-style-type: none;
-//   }
-// }
 
 // H5BP helper classes & mixins.
 @include h5bp-helpers;
