@@ -380,6 +380,15 @@ section.sponsors {
   
 }
 
+// Terms page
+section.terms {
+  ul { 
+     list-style-type: disc; 
+     list-style-position: inside; 
+  }
+  li {margin-left: 1em;}
+}
+
 // Blog
 section.blog {
   @include span-columns(12,12);
