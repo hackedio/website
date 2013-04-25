@@ -299,8 +299,8 @@ section.about {
 
     &.about-share { @include omega(); }
 
-    &.about-blog { 
-     @include span-columns(9,9); 
+    &.about-blog {
+     @include span-columns(9,9);
      margin-top: 2em;
     }
   }
@@ -331,9 +331,9 @@ section.sponsors-sidebar {
       }
     }
   }
-  
+
   p { font-size: 0.8em; }
-  
+
   .tickets-cta {
     margin: 0 0 2em 0;
     padding: 0;
@@ -342,7 +342,7 @@ section.sponsors-sidebar {
       padding: 0.5em 0;
     }
   }
-  
+
 }
 
 // Venue & Travel
@@ -363,28 +363,36 @@ section.venue {
 
 // Sponsorship page
 section.sponsors {
+  .sponsor {
+    display: table;
+    margin: 0;
 
-  .sponsor-listing{
-    h3 { margin-top: 0em; }
+    .sponsor-logo {
+      display: table-cell;
+      width: columns(6,12);
+      vertical-align: middle;
+      text-align: center;
+    }
 
-    img { 
-      float: left;
-      margin: 0 1em 0 0;
+    .sponsor-copy {
+      display: table-cell;
+      width: columns(6,12);
+      vertical-align: middle;
     }
   }
-  
+
   .sponsor-partners {
     text-align: center;
     img { margin: 0 1em 0 0; }
   }
-  
+
 }
 
 // Terms page
 section.terms {
-  ul { 
-     list-style-type: disc; 
-     list-style-position: inside; 
+  ul {
+     list-style-type: disc;
+     list-style-position: inside;
   }
   li {margin-left: 1em;}
 }
@@ -477,16 +485,25 @@ section.blog {
     h1, h2, h3, h4 { margin: 0.25em 0; }
   }
 
+  section.tickets-cta {
+    a {
+      padding: 0.5em;
+      display: block;
+      font-size: 1.25em;
+    }
+  }
+
   section.sponsors-sidebar {
     @include span-columns(12,12);
 
+    h2 { font-size: 1.5em; text-align: center; }
+    p { font-size: 1em; }
+
     ul {
       li {
-        @include span-columns(6,12);
-        @include nth-omega(2);
 
         img {
-          max-height: 60px;
+          width: 75%;
         }
       }
     }
@@ -497,8 +514,24 @@ section.blog {
   }
 
   section.sponsors {
-    .sponsor-listing {
-      img { margin-bottom: 1em; }
+    .sponsor {
+      margin-top: 1em;
+      display: block;
+      .sponsor-logo {
+        display: block;
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        text-align: center;
+
+        img {
+          margin-left: auto;
+          margin-right: auto;
+          width: 75%;
+        }
+
+      }
+      .sponsor-copy { display: block; width: 100%; margin-left: 0; margin-right: 0; }
     }
   }
 
