@@ -485,16 +485,25 @@ section.blog {
     h1, h2, h3, h4 { margin: 0.25em 0; }
   }
 
+  section.tickets-cta {
+    a {
+      padding: 0.5em;
+      display: block;
+      font-size: 1.25em;
+    }
+  }
+
   section.sponsors-sidebar {
     @include span-columns(12,12);
 
+    h2 { font-size: 1.5em; text-align: center; }
+    p { font-size: 1em; }
+
     ul {
       li {
-        @include span-columns(6,12);
-        @include nth-omega(2);
 
         img {
-          max-height: 60px;
+          width: 75%;
         }
       }
     }
