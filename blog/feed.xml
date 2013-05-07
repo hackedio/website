@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>HACKED Blog</title>
+  <subtitle>Learn&amp;gt;Build&amp;gt;Share</subtitle>
+  <id>http://hacked.io/blog/</id>
+  <link href="http://hacked.io/blog/"/>
+  <link href="http://hacked.io/blog/feed.xml" rel="self"/>
+  <updated>2013-04-24T19:49:00Z</updated>
+  <author>
+    <name>The HACKED Team</name>
+  </author>
+  <entry>
+    <title>The waiting is over</title>
+    <link rel="alternate" href="/blog/2013/04/24/the-waiting-is-over/"/>
+    <id>/blog/2013/04/24/the-waiting-is-over/</id>
+    <published>2013-04-24T19:49:00Z</published>
+    <updated>2013-04-24T19:49:00Z</updated>
+    <author>
+      <name>The HACKED Team</name>
+    </author>
+    <content type="html">&lt;p&gt;Two years ago we wondered.&lt;/p&gt;
+
+&lt;p&gt;What if?&lt;/p&gt;
+
+&lt;p&gt;What if we could organize an epic hackday, the likes of which London hasn&amp;#8217;t seen for a while? What if we could find an amazing venue that could host us? What if we brought 500 awesome developers and designers together and let their creativity loose on the world? What if we were crazy enough to try and pull this off?&lt;/p&gt;
+
+&lt;p&gt;It has taken us two years since we first started plotting and planning this: today we are thrilled to confirm that HACKED will be taking place at The O2 on July 20th and 21st.&lt;/p&gt;
+
+&lt;p&gt;We will provide you and 499 other developers, designers, hardware hackers and tinkerers with inspiring talks, tasty food and a fantastic venue. All you need to do is bring your ideas and a sleeping bag and you&amp;#8217;ll have a chance to make new friends and build awesome stuff.&lt;/p&gt;
+
+&lt;p&gt;The first round of tickets are being released tomorrow (Friday 26th) at 12pm on the tickets page. More tickets will become available as we get closer to HACKED, so if you&amp;#8217;re not successful keep an eye on the blog and the mailing list for info about future releases.&lt;/p&gt;</content>
+  </entry>
+</feed>

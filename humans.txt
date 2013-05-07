@@ -1,0 +1,23 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+    HACKED is bought to you by:
+
+    Cristiano Betta - @cbetta
+    Kevin Prince - @nextgengames
+    Guy Southam - @moretoitsurely
+    Melinda Seckingon - @mseckington
+    Nic Whatmore - @nicwhatmore
+    Robert Lee-Cann - @leeky
+
+# THANKS
+
+    Barry Clarke
+    Terence Eden
+
+# TECHNOLOGY COLOPHON
+
+    HTML5, CSS3
+    jQuery, Modernizr
+    Middleman, Susy, Compass and SASS
