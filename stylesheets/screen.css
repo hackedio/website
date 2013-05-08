@@ -820,14 +820,19 @@ section.terms ul {
   list-style-type: disc;
   list-style-position: inside;
 }
-section.terms li {
-  margin-left: 1em;
-}
 
 section.blog {
   width: 100%;
   float: left;
   margin-right: 1.69492%;
+}
+section.blog ul {
+  list-style-type: disc;
+}
+section.blog ul li {
+  margin-left: 1em;
+  margin-bottom: 0.25em;
+  list-style-position: outside;
 }
 
 @media only screen and (min-width: 1200px) {
