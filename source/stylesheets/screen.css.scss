@@ -394,12 +394,21 @@ section.terms {
      list-style-type: disc;
      list-style-position: inside;
   }
-  li {margin-left: 1em;}
 }
 
 // Blog
 section.blog {
   @include span-columns(12,12);
+
+  ul {
+    list-style-type: disc;
+
+    li {
+      margin-left: 1em;
+      margin-bottom: 0.25em;
+      list-style-position: outside;
+    }
+  }
 }
 
 // Media Queries --------------------------------------------------------------
