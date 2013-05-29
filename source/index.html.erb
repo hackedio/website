@@ -20,7 +20,7 @@
 
   <div class="about-blog">
     <h1>Latest News</h1>
-    <% blog.articles[0..0].each do |article| %>
+    <% blog.articles[0..2].each do |article| %>
     <article>
       <h2><%= link_to article.title, article %></h2>
      <%= article.summary %>
