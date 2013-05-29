@@ -796,6 +796,7 @@ section.venue .venue-map iframe {
 
 section.sponsors .sponsor {
   display: table;
+  width: 100%;
   margin: 0;
 }
 section.sponsors .sponsor .sponsor-logo {
