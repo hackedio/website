@@ -4,7 +4,7 @@ date: 2013-06-11 15:45 UTC
 tags:
 ---
 
-In an amazing time of INSERT TIME minutes you all snapped up the final two hundred tickets! Now if you did not get a ticket there's 
+In an amazing time of six minutes you all snapped up the final two hundred tickets! Now if you did not get a ticket there's 
 still a chance you can come to HACKED. We have now launched the waiting list which is available on the <a href="/waitinglist">waiting list</a> page.
 
 **How will it work?**
