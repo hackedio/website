@@ -20,7 +20,7 @@
 
   <div class="about-blog">
     <h1>Latest News</h1>
-    <% blog.articles[0..0].each do |article| %>
+    <% blog.articles[0..2].each do |article| %>
     <article>
       <h2><%= link_to article.title, article %></h2>
      <%= article.summary %>
@@ -32,17 +32,20 @@
 
 <section class="sponsors-sidebar">
   <section class="tickets-cta">
-    <h1><a href="/tickets">GET YOUR HACKED TICKET NOW!</a></h1>
+    <h1><a href="/waitinglist">HACKED IS SOLD OUT <br/> JOIN THE WAITING LIST</a></h1>
   </section>
-  <h2>Sponsors:</h2>
+  <h2>Supported by:</h2>
   <ul>
     <li><a target="_blank" href="http://thelab.o2.com/"><img src="/images/sponsors/thelab.png" alt="The Lab powered by O2"></a></li>
     <li><a target="_blank" href="http://heroku.com/"><img src="/images/sponsors/heroku.png" alt="Heroku"></a></li>
     <li><a target="_blank" href="http://developer.nokia.com/"><img src="/images/sponsors/nokia.png" alt="Nokia"></a></li>
     <li><a target="_blank" href="http://developer.paypal.com/"><img src="/images/sponsors/paypal.png" alt="PayPal"></a></li>
+    <li><a target="_blank" href="http://developer.yahoo.com/"><img src="/images/sponsors/yahoo.png" alt="Yahoo! Developer Network"></a></li>
     <li><a target="_blank" href="http://techsmith.com/"><img src="/images/sponsors/techsmith.png" alt="TechSmith"></a></li>
+    <li><a target="_blank" href="http://www.equalexperts.com//"><img src="/images/sponsors/equalexperts.png" alt="Equal Experts"></a></li>
+    <li><a target="_blank" href="http://mailjet.com/"><img src="/images/sponsors/mailjet.png" alt="MailJet"></a></li>
+    <li><a target="_blank" href="http://github.com/"><img src="/images/sponsors/github.png" alt="GitHub"></a></li>
     <li><a target="_blank" href="http://www.bbc.co.uk/rd"><img src="/images/sponsors/bbc.png" alt="BBC R&amp;D"></a></li>
   </ul>
-  <p><a href="/sponsors#cta">Interested in sponsoring HACKED?</a></p>
 </section>
 
