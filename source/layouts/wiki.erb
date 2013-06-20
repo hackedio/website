@@ -1,0 +1,11 @@
+<% wrap_layout :layout do %>
+  <section class="wiki-headline">
+    <h1>Wiki</h1>
+  </section>
+  <nav class="wiki">
+    <%= partial "layouts/wiki_navigation" %>
+  </nav>
+  <section class="wiki">
+    <%= yield %>
+  </section>
+<% end %>

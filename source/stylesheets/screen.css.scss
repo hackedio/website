@@ -412,6 +412,66 @@ section.blog {
   }
 }
 
+// Wiki
+section.wiki-headline {
+  margin: 1em 0 0 0;
+  padding: 0;
+}
+
+nav.wiki {
+  @include span-columns(3,12);
+  @include leader;
+  @include trailer;
+  @include clearfix;
+
+  padding-top: rhythm(1);
+  padding-bottom: rhythm(1);
+  
+  margin-top: 0;
+  
+  ul {
+    text-align: left;
+    list-style-type: none;
+    margin: 0;
+
+    li {
+      margin: 0.5em 0 0 0;
+
+      &.active {
+        a, a:visited {
+          text-decoration: underline;
+        }
+      }
+
+      a {
+        padding: 0.5em;
+        border-radius: 5px;
+        -webkit-transition: all 0.1s ease-in;
+        -moz-transition: all 0.1s ease-in;
+        transition: all 0.1s ease-in;
+        text-decoration: none;
+      }
+    }
+  }
+  
+  hr { width: 80%; }
+  
+  h4 { 
+    color: #ee145b;
+    margin: 0.5em 0 1em 0;
+ }
+}
+
+section.wiki {
+    @include span-columns(9 omega,12);
+
+    margin-top: 0;
+
+    h2 {
+      margin-top: 0.5em;
+    }
+}
+
 // Media Queries --------------------------------------------------------------
 // Wide version of site
 @media only screen and (min-width: 1200px) {
