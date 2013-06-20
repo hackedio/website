@@ -770,7 +770,7 @@ section.sponsors-sidebar .tickets-cta {
 }
 section.sponsors-sidebar .tickets-cta h1 {
   font-size: 1.1em;
-  padding: 0.5em 0;
+  padding: 0.5em 0.25em;
 }
 
 section.venue .venue-location {
