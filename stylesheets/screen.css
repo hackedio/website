@@ -836,6 +836,59 @@ section.blog ul li {
   list-style-position: outside;
 }
 
+section.wiki-headline {
+  margin: 1em 0 0 0;
+  padding: 0;
+}
+
+nav.wiki {
+  width: 23.72881%;
+  float: left;
+  margin-right: 1.69492%;
+  margin-top: 1.33333em;
+  margin-bottom: 1.33333em;
+  overflow: hidden;
+  padding-top: 1.33333em;
+  padding-bottom: 1.33333em;
+  margin-top: 0;
+}
+nav.wiki ul {
+  text-align: left;
+  list-style-type: none;
+  margin: 0;
+}
+nav.wiki ul li {
+  margin: 0.5em 0 0 0;
+}
+nav.wiki ul li.active a, nav.wiki ul li.active a:visited {
+  text-decoration: underline;
+}
+nav.wiki ul li a {
+  padding: 0.5em;
+  border-radius: 5px;
+  -webkit-transition: all 0.1s ease-in;
+  -moz-transition: all 0.1s ease-in;
+  transition: all 0.1s ease-in;
+  text-decoration: none;
+}
+nav.wiki hr {
+  width: 80%;
+}
+nav.wiki h4 {
+  color: #ee145b;
+  margin: 0.5em 0 1em 0;
+}
+
+section.wiki {
+  width: 74.57627%;
+  float: right;
+  margin-right: 0;
+  margin-top: 0;
+}
+section.wiki h2 {
+  margin-top: 0.5em;
+}
+
 @media only screen and (min-width: 1200px) {
   body {
     font-size: 125%;
