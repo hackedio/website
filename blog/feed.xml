@@ -5,10 +5,21 @@
   <id>http://hacked.io/blog/</id>
   <link href="http://hacked.io/blog/"/>
   <link href="http://hacked.io/blog/feed.xml" rel="self"/>
-  <updated>2013-06-11T15:45:00Z</updated>
+  <updated>2013-06-18T17:04:00Z</updated>
   <author>
     <name>The HACKED Team</name>
   </author>
+  <entry>
+    <title>Volunteer at HACKED</title>
+    <link rel="alternate" href="/blog/2013/06/18/volunteer-at-hacked/"/>
+    <id>/blog/2013/06/18/volunteer-at-hacked/</id>
+    <published>2013-06-18T17:04:00Z</published>
+    <updated>2013-06-18T17:04:00Z</updated>
+    <author>
+      <name>The HACKED Team</name>
+    </author>
+    <content type="html">&lt;p&gt;Think you can help make HACKED happen? Well we have now opened up volunteer signup so head on over to &lt;a href='http://hacked.io/volunteer'&gt;http://hacked.io/volunteer&lt;/a&gt; to find out more!&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>It's a SELL OUT!</title>
     <link rel="alternate" href="/blog/2013/06/11/its-a-sell-out/"/>
