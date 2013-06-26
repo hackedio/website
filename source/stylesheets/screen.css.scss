@@ -618,6 +618,14 @@ section.wiki {
       }
     }
   }
+  
+  // Wiki
+  nav.wiki {
+    @include span-columns(12,12);
+  }
+  section.wiki {
+    @include span-columns(12,12);
+  }
 }
 
 // H5BP helper classes & mixins.
