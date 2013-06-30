@@ -1033,6 +1033,18 @@ section.wiki h2 {
   section.venue .venue-map iframe {
     height: 200px;
   }
+
+  nav.wiki {
+    width: 100%;
+    float: left;
+    margin-right: 1.69492%;
+  }
+
+  section.wiki {
+    width: 100%;
+    float: left;
+    margin-right: 1.69492%;
+  }
 }
 .ir {
   background-color: transparent;
