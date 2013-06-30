@@ -4,7 +4,7 @@ date: 2013-06-30 09:31 UTC
 tags:
 ---
 
-It's now just under 3 weeks until HACKED, and we know some of you have not got a ticket yet. There are still two ways to attend HACKED!
+It's now just under 3 weeks until HACKED, and we know some of you don't have a ticket yet. There are still two ways to attend HACKED!
 
 READMORE
 
