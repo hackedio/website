@@ -1,1 +1,34 @@
-Testing, 123
+<h1>Need some help?</h1>
+<p>Having some technical trouble? Can't get an API to work correctly? Need a hand installing something?</p>
+
+<p>Let us help!</p>
+
+<form accept-charset="UTF-8" action="http://help.hacked.io/tickets" id="helpticket" method="post">
+
+  <h3>What is your name?</h3>
+  <label for="name">Name:</label><br />
+  <input type="text" name="name" id="name" placeholder="e.g. John"/>
+  <hr>
+
+  <h3>Where are you?</h3>
+  <label for="seat">Seat:</label><br />
+  <input type="text" name="seat" id="seat" placeholder="e.g. 1A" />
+  <hr>
+
+  <h3>What issue are you having?</h3>
+  <p>Just give us a brief description of your issue so we can arrive prepared.</p>
+  <textarea style="width:70%;" rows="5" id="desc" name="desc"></textarea>
+  <hr>
+
+  <h3>Tell us more:</h3>
+  <p>This will help us decide the best member of staff to send over.</p>
+  <div style="margin-left:1%;">
+    <input type="radio" name="group" value="THUNDER" checked=true /> Software issue<br />
+    <input type="radio" name="group" value="HEROES" /> Hardware issue<br />
+    <input type="radio" name="group" value="ALL" /> Miscellaneous
+  </div>
+  <hr>
+
+  <input type="submit"/>
+
+</form>
