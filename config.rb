@@ -69,7 +69,7 @@ page "404.html", directory_index: false
 #   @which_fake_page = "Rendering a fake page with a variable"
 # end
 
-page "/wiki/*", :layout => 'wiki'
+page "/almanac/*", :layout => 'almanac'
 
 ###
 # Helpers
