@@ -475,6 +475,11 @@ section.wiki {
       list-style: disc outside;
       margin-left: 20px;
     }
+
+    ol {
+      list-style: decimal outside;
+      margin-left: 25px;
+    }
 }
 
 // Media Queries --------------------------------------------------------------
