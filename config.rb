@@ -103,6 +103,8 @@ helpers do
   def nav_link_to(link, url, opts={})
     if current_resource.url == url_for(url)
       prefix = '<li class="active">'
+    elsif url == "/almanac/" && current_resource.url =~ /^\/almanac\/.+/i && link != "Home"
+      prefix = '<li class="active">'
     else
       prefix = '<li>'
     end
