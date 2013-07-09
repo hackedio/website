@@ -888,6 +888,14 @@ section.wiki {
 section.wiki h2 {
   margin-top: 0.5em;
 }
+section.wiki ul {
+  list-style: disc outside;
+  margin-left: 20px;
+}
+section.wiki ol {
+  list-style: decimal outside;
+  margin-left: 25px;
+}
 
 @media only screen and (min-width: 1200px) {
   body {
