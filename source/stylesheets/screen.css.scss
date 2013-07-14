@@ -471,6 +471,17 @@ section.wiki {
       margin-top: 0.5em;
     }
 
+    h3 {
+      small {
+        color: #333;
+      }
+
+      em  {
+        font-style: normal;
+        font-size: 0.8em
+      }
+    }
+
     ul {
       list-style: disc outside;
       margin-left: 20px;
