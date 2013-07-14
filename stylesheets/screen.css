@@ -888,6 +888,13 @@ section.wiki {
 section.wiki h2 {
   margin-top: 0.5em;
 }
+section.wiki h3 small {
+  color: #333;
+}
+section.wiki h3 em {
+  font-style: normal;
+  font-size: 0.8em;
+}
 section.wiki ul {
   list-style: disc outside;
   margin-left: 20px;
