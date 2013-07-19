@@ -10,7 +10,7 @@
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width; initial-scale=1.0">
   <link rel="alternate" type="application/atom+xml" title="The HACKED Blog" href="http://hacked.io/blog/feed.xml" />
-  <link href="../../stylesheets/screen.css?1372585343" media="screen" rel="stylesheet" type="text/css" />
+  <link href="../../stylesheets/screen.css?1373817644" media="screen" rel="stylesheet" type="text/css" />
 
   <script type="text/javascript">
     WebFontConfig = { fontdeck: { id: '32438' } };
@@ -40,9 +40,9 @@
   <ul role="navigation" aria-label="Main navigation">
   <li><a href="/">Home</a></li>
 	<li><a href="/venue/">Venue & Travel</a></li>
-	<li><a href="/questions/">Q&amp;As</a></li>
-  <li><a href="/schedule/">Schedule</a></li>
   <li><a href="/sponsors/">Sponsors</a></li>
+  <li><a href="/press/">Press</a></li>
+  <li class="active"><a href="/almanac/">Almanac</a></li>
 </ul>
 
 </header>
@@ -56,13 +56,41 @@
 <ul role="wiki-main-navigation" aria-label="Wiki main navigation">
   <li><a href="/almanac/">Home</a></li>
   <li><a href="/almanac/schedule/">Schedule</a></li>
-  <li><a href="/almanac/how-to-hack/">How to Hack</a></li>
-  <li><a href="/almanac/challenges/">The Challenges</a></li>
-  
-  <li><a href="/almanac/thunder/">Network and Electrics</a></li>
-  <li><a href="/almanac/thirst/">Produce</a></li>
-  <li><a href="/almanac/sheild/">Badges and Wristbands</a></li>  
+  <li><a href="/almanac/shield/">Registration</a></li>
+  <li><a href="/almanac/parking/">Parking</a></li>
+  <li><a href="/almanac/food/">Food</a></li>
+  <li><a href="/almanac/what-to-bring/">What To Bring</a></li>
+  <!--<li class="active"><a href="/almanac/get-help/">Get Help</a></li> -->
+  <li><a href="/almanac/questions/">Q&As</a></li>
   <li class="active"><a href="/almanac/get-help/">Get Help</a></li>
+</ul>
+
+<hr>
+
+<h4>Learn</h4>
+<ul role="wiki-main-navigation" aria-label="Wiki main navigation">
+  <li><a href="/almanac/presentations/">Presentations</a></li>
+  <li><a href="/almanac/workshops/">Workshops</a></li>
+  <li><a href="/almanac/lightning_talks/">Lightning Talks</a></li>
+</ul>
+
+
+<hr>
+
+<h4>Build</h4>
+<ul role="wiki-main-navigation" aria-label="Wiki main navigation">
+	<li><a href="/almanac/rules/">Rules</a></li>
+  <li><a href="/almanac/how-to-hack/">How to hack?</a></li>
+  <li><a href="/almanac/challenges/">Challenges</a></li>
+  <li><a href="/almanac/thunder/">Network &amp; Electrics</a></li>
+  <li><a href="/almanac/repositories/">Git Repositories</a></li>
+</ul>
+
+<hr>
+
+<h4>Share</h4>
+<ul role="wiki-main-navigation" aria-label="Wiki main navigation">
+  <li><a href="/almanac/twitter/">Twitter</a></li>
 </ul>
 
 <hr>
@@ -71,8 +99,7 @@
 <ul role="wiki-sponsors-navigation" aria-label="Wiki sponsors navigation">
   <li><a href="/almanac/thelab/">The Lab by O2</a></li>
   <li><a href="/almanac/heroku/">Heroku</a></li>
-  <li><a href="/almanac/nokia/">Nokia</a></li>
-  <li><a href="/almanac/windows/">Windows</a></li>
+  <li><a href="/almanac/nokia_and_windows/">Nokia & Windows</a></li>
   <li><a href="/almanac/paypal/">PayPal</a></li>
   <li><a href="/almanac/gothinkbig/">GoThinkBig</a></li>
   <li><a href="/almanac/yahoo/">Yahoo!</a></li>
@@ -80,18 +107,62 @@
   <li><a href="/almanac/equalexperts/">Equal Experts</a></li>
   <li><a href="/almanac/mailjet/">MailJet</a></li>
   <li><a href="/almanac/github/">GitHub</a></li>
+</ul>
+
+<hr>
+
+<h4>Partners</h4>
+<ul role="wiki-sponsors-navigation" aria-label="Wiki sponsors navigation">
   <li><a href="/almanac/bbcrd/">BBC R&D</a></li>
+  <li><a href="/almanac/philips/">Philips Hue</a></li>
 </ul>
   </nav>
   <section class="wiki">
-    Testing, 123
+    <div id="get_help">
+  <h1>Need some help?</h1>
+  <p>Having some technical trouble? Can't get an API to work correctly? Need a hand installing something?</p>
+
+  <p>Let us help!</p>
+
+  <form accept-charset="UTF-8" action="http://help.hacked.io/tickets" id="helpticket" method="post">
+
+    <h3>What is your name?</h3>
+    <label for="name">Name:</label><br />
+    <input type="text" name="name" id="name" placeholder="e.g. John"/>
+    <hr>
+
+    <h3>Where are you?</h3>
+    <label for="seat">Table:</label><br />
+    <input type="text" name="seat" id="seat" placeholder="e.g. A1" />
+    <hr>
+
+    <h3>What issue are you having?</h3>
+    <p>Just give us a brief description of your issue so we can arrive prepared.</p>
+    <textarea style="width:70%;" rows="5" id="desc" name="desc"></textarea>
+    <hr>
+
+    <h3>Tell us more:</h3>
+    <p>This will help us decide the best member of staff to send over.</p>
+    <div style="margin-left:1%;">
+      <!-- TODO: The following options need editing, these are only placeholders until we decide
+           on the actual options. -->
+      <input type="radio" name="group" value="THUNDER" checked=true /> Network or electrical issue<br />
+      <input type="radio" name="group" value="SHIELD" /> Badge/Label/Registration issues<br />
+      <input type="radio" name="group" value="HEROES" /> Other<br />
+    </div>
+    <hr>
+
+    <input id="submit_button" type="submit"/>
+
+  </form>
+</div>
   </section>
 
 </div>
 
 <footer role="contentinfo">
-  <p>HACKED is organised by <a href="https://thelab.o2.com/">The Lab</a>
-     with support from
+  <p>HACKED is co-founded by <a href="https://thelab.o2.com/">The Lab</a>
+     and
      <a href="http://geeksoflondon.com/">Geeks of London</a>
   </p>
   <p>&copy;2013 Telefónica UK Limited, 260 Bath Road, Slough,
@@ -111,7 +182,7 @@
 
   <script src="../../javascripts/libs/holder.js?1367915509" type="text/javascript"></script>
   <script src="../../javascripts/plugins.js?1367915509" type="text/javascript"></script>
-<script src="../../javascripts/script.js?1367915508" type="text/javascript"></script>
+<script src="../../javascripts/script.js?1374245038" type="text/javascript"></script>
   <script type="text/javascript">
 
     var _gaq = _gaq || [];
