@@ -1,11 +1,9 @@
 source 'https://rubygems.org'
 
-gem "middleman", "~> 3.0.13"
-gem "middleman-deploy", "~> 0.0.11"
-gem "middleman-livereload", "~>3.0.1"
+gem "middleman"
+gem "middleman-deploy"
+gem "middleman-livereload"
 gem "middleman-blog"
-gem "nokogiri"
-gem 'therubyracer', '0.10.2'
 
 # Compass plugins
 gem 'susy', "~> 1.0.8" # Susy

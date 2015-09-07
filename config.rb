@@ -41,7 +41,7 @@ end
 
 page "/blog/feed.xml", :layout => false
 
-activate :livereload, grace_period: 0.5
+activate :livereload
 
 activate :directory_indexes
 
@@ -145,4 +145,3 @@ configure :build do
   # Or use a different image path
   # set :http_path, "/Content/images/"
 end
-
